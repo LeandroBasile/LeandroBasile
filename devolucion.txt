@@ -1,0 +1,4 @@
+La devolucion en cuanto a los motores de plantilla
+elijo ejs ya que es lo mas parecido a trabajar con html,
+pero no descarto HBS ya que para dar estilos creo que parece ser mas practico,
+aun no probe estilar con EJS, por eso el que descarto es PUG.

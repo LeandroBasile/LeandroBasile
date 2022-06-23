@@ -1,0 +1,35 @@
+form( class="form-floating"
+      action="/productos"
+      method="post"
+      style="width: 300px; margin-top: 100px")
+    
+      div(class="mb-3")
+        label(for="formGroupExampleInput" class="form-label")='Ingrese el producto'
+        input( type="text"
+          name="title"
+          class="form-control"
+          id="formGroupExampleInput")
+        
+      
+        div( class="mb-3")
+        label( for="formGroupExampleInput2" class="form-label")='Ingrese el precio'
+        input(type="number"
+          name="price"
+          class="form-control"
+          id="formGroupExampleInput2")
+        
+      
+      div( class="mb-3")
+        label( for="formGroupExampleInput3" class="form-label")='Url de la foto'
+        input(type="text"
+          name="thumbnail"
+          class="form-control"
+          id="formGroupExampleInput3")
+        
+      
+      div( class="col-12")
+        button( type="submit" name="Enviar" class="btn btn-primary")= 'Enviar'
+        
+     
+      div( class="col-12")
+        a(href="/productos")='Ir a productos'

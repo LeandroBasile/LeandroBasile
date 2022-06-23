@@ -1,0 +1,24 @@
+
+
+div
+    h1='Productos'
+        br
+        if hayProductos
+            div
+                table(class="table")
+                  thead       
+                    tr
+                        th(scope="col")='Nombre'
+                        th(scope="col")='Precio'
+                        th(scope="col")='Foto'
+                        each producto in productos
+                            tr
+                              tbody   
+                                td=producto.title
+                                td=producto.price
+                                td
+                                    img(width="50" src=producto.thumbnail alt="not found")
+        else
+            h3='No se encontraron productos'
+        br
+    a(href="/" type="button")='Cargar un nuevo producto' 

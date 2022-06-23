@@ -1,0 +1,36 @@
+<div>
+    <h1>Vista de Productos</h1>
+    
+
+    {{#if hayProductos}}
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Foto</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each productos}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.title}}</td>
+                <td>${{this.price}}</td>
+                <td><img width="50" src={{this.thumbnail}} alt="not found"></td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{else}}
+    <div class="alert alert-warning d-flex align-items-center" role="alert" style="margin-top: 100px ;">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+        <div>
+            {{this.error}}
+        </div>
+    </div>
+    {{/if}}
+    <br>
+    <a href="/" type="button">Cargar un nuevo producto</a>
